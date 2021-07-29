@@ -1,0 +1,43 @@
+Basaraba Razvan - 324CC
+
+Otp
+	Am folosit un label pentru a parcurge sirul plaintext si key
+caracter cu caracter, apoi am facut xor intre plaintext[i] si
+key[i] si am copiat rezultatul in chipertext[i].
+
+Caesar
+	Petru inceput, am redus cheia prin scaderi repetate la un numar
+intre 0 si 26 (26 de litere are alfabetul). Am parcurs apoi sirul
+plaintext si am verificat daca fiecare caracter este litera (mica sau mare).
+In cazul in care este, adun codul ascii al caracterului cu cheia, iar daca
+depaseste ultima litera din alfabet, scad 26 pentru a ramane in continuare
+o litera.
+
+Vigenere
+	Alegem aceiasi logica ca la taskul 2 pentru a verifica daca plaintext[i]
+este litera. Folosim un count pe care il incrementam de fiecare data cand gasim
+in plaintext o litera. Cand countul ajunge la valoare lui length_key, facem
+pe key sa pointeze din nou la inceputul sirului si countul 0.
+
+My_strstr
+	Parcurgem sirul haystack caracter cu caracter si comaparam pe acesta cu 
+primul caracter din needle. In cazul in care acestea sunt egale, salvam intr-o
+variabila 'ok' pozitia curenta a caracterului din haystack. Cat timp caracterele din
+haystack si needle sunt egale mergem mai departe in ambele siruri. Daca am ajuns 
+la finalul lui needle insemna ca am gasit ce cautam si afisam variabila 'ok'. Daca 
+nu am ajuns la final, insemna ca nu am gasit pozitia la care se afla sirul needle
+in haystack, deci facem din nou pe needle sa pointeze la adresa de inceput a sirului
+si reluam incrementare lui haystack de la variabila 'ok'.
+
+Bin_to_hex
+	Pentru inceput am calculat in cati nibble pot sa bag secventa de biti. Apoi
+am un count care il incrementez de fiecare data si in care vad la al catelea
+bit sunt in nibbelul respectiv (cand trec la un nibble nou, adica countul ajunge
+la 4, ii atribuiam din nou 0 valorii lui count). Pentru ficare nibble calculez
+suma bitilor si o convertesc la o valoare din hexa, apoi pun rezultatul in 
+hexa_value.
+
+	
+	Tema mi s-a parut accesibila, desi mi-a luat foarte mult timp, insa dupa
+ce mi-am dat seama cum sa lucrez cu registrele, variabilele locale si labelurile
+a fost mai usor.

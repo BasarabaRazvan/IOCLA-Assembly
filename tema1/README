@@ -1,0 +1,13 @@
+Basaraba Razvan, 324CC
+
+  Pentru a afisa outputul am ales sa contruiesc un String result,
+in care sa retin tot ce am nevoie. Astfel, fiecare caracter pritmit 
+ca input il verificam daca este unul din cazurile speciale ("%%",
+"%d", "%u", "%x", "%c", "%s", "/n", "/t"), iar daca nu il afisam
+asa cum este.
+  Pentru cazurile speciale, converteam la char ce imi intorcea
+va_argul, apoi copiam in result, caracter cu caracter rezultatul.
+
+  Tema mi s-a parut super ok, m-a ajutat sa imi fixez mai bine 
+tipurile de date si cum sunt stocate acestea in memorie(foarte bine
+explicat si la curs).
